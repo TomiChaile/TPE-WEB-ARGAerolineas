@@ -1,0 +1,8 @@
+<?php
+
+include_once 'registro.controller.php';
+include_once 'registros.php'
+
+
+$controller = new RegistroController();
+$controller->showUsuariobyNombre();
