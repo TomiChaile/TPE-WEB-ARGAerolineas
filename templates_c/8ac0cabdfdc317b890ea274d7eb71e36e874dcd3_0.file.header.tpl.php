@@ -1,7 +1,31 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-11-13 23:48:45
+  from 'C:\xampp2\htdocs\tpe\templates\header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_6371744d376fc2_93708494',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8ac0cabdfdc317b890ea274d7eb71e36e874dcd3' => 
+    array (
+      0 => 'C:\\xampp2\\htdocs\\tpe\\templates\\header.tpl',
+      1 => 1668379720,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6371744d376fc2_93708494 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 <head>
-    <base href="{BASE_URL}">
+    <base href="<?php echo BASE_URL;?>
+">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,15 +53,15 @@
                   <li class="nav-item">
                       <a class="nav-link" aria-current="page" href="list">Reserva</a>
                     </li>
-                  {if !isset($smarty.session.email)}
+                  <?php if (!(isset($_SESSION['email']))) {?>
                     <li class="nav-item">
                       <a class="nav-link" aria-current="page" href="registrarse">Registrarse</a>
                     </li>
-                 {else}
+                 <?php } else { ?>
                     <li class="nav-item ml-auto">
                       <a class="nav-link" aria-current="page" href="logout">Logout</a>
                     </li>
-                  {/if}
+                  <?php }?>
                 </ul>
               </div>
             </div>
@@ -46,3 +70,5 @@
 
     <!-- inicio main container -->
     <main class="container">
+<?php }
+}

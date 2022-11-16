@@ -15,7 +15,10 @@ class AuthView {
         
     }
 
-    
+    public function showFormRegistro($error = null){
+        $this->smarty->assign("error", $error);
+        $this->smarty->display('templates/formRegistro.tpl');
+    }
 
     function showError() {
         echo "<h1>ERROR! </h1>";

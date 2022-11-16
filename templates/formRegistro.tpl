@@ -3,8 +3,8 @@
 <div class="mt-5 w-25 mx-auto">
 
 
-    <h1>Inicia sesion!</h1>
-    <form method="POST" action="validate">
+    <h1>Registrate!</h1>
+    <form method="POST" action="ingresar">
   
         <div class="form-group">
         
@@ -21,7 +21,11 @@
                 {$error}
             </div>
         {/if}
-        <button type="submit" class="btn btn-primary mt-3">Entrar</button>
+        <button type="submit" class="btn btn-primary mt-3">Registrarme</button>
+       <div>
+       <h3>Ya tienes una cuenta?</h3>
+       <a href='login' type='button' class='btn btn-primary mt-3'>Iniciar Sesion</a>
+       </div>
     </form>
 </div>
 

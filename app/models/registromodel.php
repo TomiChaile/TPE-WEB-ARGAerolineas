@@ -24,17 +24,18 @@ class UserModel {
     public function getUserByEmail($email) {
         $query = $this->db->prepare("SELECT * FROM registro WHERE email = ?");
         $query->execute([$email]);
-        return $query->fetchAll(PDO::FETCH_OBJ);
+        $user = $query->fetch(PDO::FETCH_OBJ);
+        return $user;
       
     }
 
 
 
 
-    public function insertUsuario($email,$password){
+    public function insertUsuario($email,$clave){
     
-        $query = $this->db->prepare("INSERT INTO registro (email, password) VALUES (?,?)");  
-        $query->execute([$email,$password]);
+        $query = $this->db->prepare("INSERT INTO registro (email, clave) VALUES (?,?)");  
+        $query->execute([$email,$clave]);
        
         
        

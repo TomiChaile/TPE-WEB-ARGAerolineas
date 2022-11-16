@@ -14,13 +14,27 @@ class DestinosView {
 
     function showDestinos($destinos) {
         $this->smarty->assign('destinos', $destinos);
-        $this->smarty->display('templates/destinosTask.tpl');
+        $this->smarty->display('templates/Destinos.tpl');
     }
 
-    function Destinos($pasaje) {
-        $this->smarty->assign('pasaje', $pasaje);
-        $this->smarty->display('templates/PasajesTask.tpl');
+    function Filtrarxclase($clases){
+        $this->smarty->assign('clases',$clases);
+        $this->smarty->display('DetalleClase.tpl');
     }
+
+
+   
+
+  function editDestino($EditarDestino){
+    $this->smarty->assign('edit',$EditarDestino);
+
+    $this->smarty->display('templates/form_editD.tpl');
+}
+
+
+
+
+
 
 
 
